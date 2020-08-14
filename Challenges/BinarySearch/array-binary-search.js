@@ -1,5 +1,5 @@
 function binarySearch(arr, key) {
-  let start = 1;
+  let start = 0;
   let end = arr.length - 1;
   let mid;
 
