@@ -15,3 +15,8 @@ I took the Test Driven Development approach by first creating tests for what the
 
 ## API
 <!-- Description of each method publicly available to your Linked List -->
+
+## Chall 06 Whiteboard
+CoAuthored by Cas Ibrahim
+
+![WhiteboardLI](/home/daisyjanejohnson/codefellows/401/401-data-structures-and-algorithms/assets/ll-insertion.png)
