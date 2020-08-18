@@ -126,3 +126,4 @@ it('Can successfully insert a node after the last node of the linked list', () =
   expect(console.log).toString('{4}-->{8}-->{15}-->{16}-->null');
 
 })
+
