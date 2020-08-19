@@ -124,6 +124,33 @@ class LinkedList {
     }
     console.log(`${nodeOutput} null`);
   } 
+
+  findListLength(){
+    let currentNode = this.head;
+    let length = 0;
+    while(currentNode != null){
+      length++;
+      currentNode = currentNode.next
+    }
+    return length;
+  }
+
+  kthFromEnd(k){
+    const length = this.findListLength();
+    const wantedNode = length - k;
+    let currentNode = this.head;
+    let count = 0;
+    if(wantedNode > 0){
+      count++;
+      if(count === wantedNode){
+        return currentNode.value;
+      }
+      currentNode = currentNode.next;
+    }
+    return 'Exception'
+  }
+
+  
 };
 
 module.exports = LinkedList;
