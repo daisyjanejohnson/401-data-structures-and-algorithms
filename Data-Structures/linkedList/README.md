@@ -16,7 +16,49 @@ I took the Test Driven Development approach by first creating tests for what the
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 
-## Chall 06 Whiteboard
-CoAuthored by Cas Ibrahim
-
+## Chall 06
 ![WhiteboardLI](/home/daisyjanejohnson/codefellows/401/401-data-structures-and-algorithms/assets/ll-insertion.png)
+
+## Chall 07 
+### Kth to the End
+* 
+
+## Challenge
+* Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+
+## Approach & Efficiency
+* 
+
+## Solution
+![Whiteboard](assets/ll-kth-totheend.png);
+
+
+
+## Chall 08 
+### Zip Lists
+* Zip two Linked Lists
+
+## Challenge
+* Write a function called zipLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
+## Approach & Efficiency
+* Efficiencyt Time = On , as long as the shortest list. Space is O(1)
+
+## Solution
+![Whiteboard](assets/zipLists.png);
+
+
+
+
+
+
+- [ ] Top-level README “Table of Contents” is updated
+ - [ x] Feature tasks for this challenge are completed
+ - [ ] Unit tests written and passing
+     - [ ] “Happy Path” - Expected outcome
+     - [ x] Expected failure
+     - [ ] Edge Case (if applicable/obvious)
+ - [ ] README for this challenge is complete
+     - [ ] Summary, Description, Approach & Efficiency, Solution
+     - [ ] Link to code
+     - [ ] Picture of whiteboard

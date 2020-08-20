@@ -1,14 +1,5 @@
 'use strict';
 
-class Node {
-
-  constructor(value, next = undefined) {
-    this.value = value;
-    this.next = next;
-    // set to the value that came in on the next parameter
-    // next usually gets swet to null at the beginning
-  }
-}
 
 class LinkedList {
 
@@ -116,41 +107,47 @@ class LinkedList {
   }
  toString() {
     // find the nodes and format them correctly to output {node}-->{node}--> null
+    let str= '';
     let currentNode = this.head;
-    let nodeOutput = `{${currentNode.value}}-->`
+    
     while (currentNode.next) {
+      str += `{${currentNode.value}}-->`
       currentNode = currentNode.next;
-      nodeOutput;
+
     }
-    console.log(`${nodeOutput} null`);
+    return str + 'null';
   } 
 
-  findListLength(){
-    let currentNode = this.head;
-    let length = 0;
-    while(currentNode != null){
-      length++;
-      currentNode = currentNode.next
-    }
-    return length;
-  }
-
   kthFromEnd(k){
-    const length = this.findListLength();
-    const wantedNode = length - k;
+    const newArr = [];
     let currentNode = this.head;
-    let count = 0;
-    if(wantedNode > 0){
-      count++;
-      if(count === wantedNode){
-        return currentNode.value;
-      }
-      currentNode = currentNode.next;
+
+    if(currentNode){
+      newArr.push(currentNode.value);
     }
-    return 'Exception'
+    while(currentNode.next){
+      currentNode = currentNode.next;
+      newArr.push(currentNode.value);
+    }
+    if ( k > newArr.length){
+      return ('Exception');
+    } else if (k === newArr.length) {
+      return ('Exception');
+    } else if (k < 0) {
+      return ('Exception');
+    } else {
+    const indexOfValue = newArr.length - (k+1);
+    return newArr[indexOfValue];
+    }
+   }
   }
+class Node {
 
-  
-};
-
+  constructor(value, next = undefined) {
+    this.value = value;
+    this.next = next;
+    // set to the value that came in on the next parameter
+    // next usually gets swet to null at the beginning
+  }
+}
 module.exports = LinkedList;
