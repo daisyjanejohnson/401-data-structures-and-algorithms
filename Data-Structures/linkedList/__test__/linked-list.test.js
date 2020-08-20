@@ -127,3 +127,41 @@ it('Can successfully insert a node after the last node of the linked list', () =
 
 })
 
+it('show k is greater than the length of the linked list', () => {
+  const ll = new LinkedList();
+  ll.insert(1);
+  ll.insert(3);
+  expect(ll.kthFromEnd(2)).toEqual('Exception');
+})
+
+it('shows where k and the length of the list are the same', () => {
+  const ll = new LinkedList();
+  ll.insert(1);
+  ll.insert(3);
+  ll.insert(5);
+  expect(ll.kthFromEnd(3)).toEqual('Exception');
+})
+
+it('shows where k is not a positive integer', () => {
+  const ll = new LinkedList();
+  ll.insert(22);
+  ll.insert(33);
+  expect(ll.kthFromEnd(-1)).toEqual('Exception');
+})
+
+it('shows where the linked list is a size of 1', () => {
+  const ll = new LinkedList();
+  ll.insert(123);
+  expect(ll.kthFromEnd(0)).toEqual(123);
+})
+
+it('shows HAPPY PATH where k is in the middle of LL', () => {
+  const ll = new LinkedList();
+  ll.insert(1);
+  ll.insert(2);
+  ll.insert(3);
+  ll.insert(4);
+  ll.insert(5);
+  ll.insert(6);
+  expect(ll.kthFromEnd(2)).toEqual(4);
+})
