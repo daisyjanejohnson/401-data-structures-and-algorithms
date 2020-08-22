@@ -176,7 +176,7 @@ describe('find kth node from end in linked list', () => {
   })
 })
 // ZIP LIST TESTS
-describe('zip two lists together function', () => {
+describe.skip('zip two lists together function', () => {
   it('should zip Linked Lists together when the list lengths are equal', () => {
 
     const list1 = new LinkedList();
