@@ -12,4 +12,4 @@
 9. [Data Structures: queues with stacks](Data-Structures/queueWithStacks/queue-with-stacks.js)
 10. [Data Structures: FIFO animal shelter](Data-Structures/fifoAnimalShelter/fifo-animal-shelter.js)
 11. [Challenge: MultiBracketValidation](Challenges/multiBracketValidation)
-12. 
+12. [Data Structure: Binary Tree](Data-Structures/trees)
