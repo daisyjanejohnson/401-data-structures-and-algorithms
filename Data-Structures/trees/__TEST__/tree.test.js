@@ -1,5 +1,6 @@
 'use strict';
-const { BinarySearchTree, Node } = require('../tree.js');
+const { BinaryTree, BinarySearchTree, Node } = require('../tree.js');
+const tree = require('../tree.js');
 
 
 
@@ -61,4 +62,62 @@ describe('Binary tree tests', () => {
 
     expect(tree.postOrder()).toEqual(['banana', 'cherries', 'apples']);
   });
+
+  it('should add to root of empty tree', () => {
+    const tree = new BinarySearchTree();
+
+    tree.add(5);
+
+    expect(tree.root.value).toBe(5);
+  });
+
+  it('should add to a 1 item tree -- go left', () => {
+    const tree = new BinarySearchTree(new Node(10));
+
+    tree.add(5);
+
+    expect(tree.root.value).toBe(10);
+    expect(tree.root.left.value).toBe(5);
+    expect(tree.root.right).toBe(null);
+  });
+
+  it('should add to a 1 item tree -- go right', () => {
+    
+
+    const ten = new Node(10);
+    const five = new Node(5);
+    const fifteen = new Node(15);
+
+    ten.left = five;
+    ten.right = fifteen;
+    
+    const tree = new BinarySearchTree(ten);
+    tree.add(25);
+
+    // expect(tree.root.value).toBe(10);
+    // expect(tree.root.left.value).toBe(5);
+    expect(tree.root.right.right.value).toBe(25);
+  });
+
+  // it('should build from array', () => {
+  //   /*     10
+  //        5    15
+  //     3   7  12  17
+  //   */
+  //  const arr = [10,5,15,3,7,12,17];
+  //  const tree = new BinarySearchTree();
+
+  //  tree.fromArray(arr);
+  //  expect(tree.inOrder()).toBe([3,5,7,10,12,15,17]);
+  // })
+
+  it('Can successfully find the largest value in a tree', ()=>{
+    const eight = new Node(8);
+    const six = new Node(6);
+    const five = new Node(5, eight, six);
+    const tree = new BinarySearchTree(five);
+    expect(tree.findMaximumValue()).toEqual(8);
+  });
 });
+
+

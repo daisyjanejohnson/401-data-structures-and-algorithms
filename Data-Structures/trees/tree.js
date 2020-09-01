@@ -64,7 +64,33 @@ class BinaryTree {
     _postOrder(this.root);
     return output;
   }
-}
+  findMaximumValue(){
+    let array = [];
+    let max = 0;
+    function _preOrder(root){
+      if(!root){
+        return;
+      }
+      console.log(root.value);
+      if(root.left){
+        _preOrder(root.left);
+      }
+      array.push(root.value);
+      console.log(array);
+      if(root.right){
+        _preOrder(root.right);
+      }
+    }
+    _preOrder(this.root);
+    for (let i = 0; i < array.length; i++){
+      if (array[i] >= max){
+        max = array[i];
+        return max;
+      }
+    }
+  }
+
+  }
 
 
 
@@ -85,24 +111,38 @@ const results = tree.preOrder();
 // define a mehod named contains that accepts a value, and returns a boolean indicating whther or not the cvalue is in the tree at least once.
 
 class BinarySearchTree extends BinaryTree {
+  fromArray(arr) {
+    for (let item of arr) {
+      this.add.item;
+    }
+  }
+
   add(value) {
-    const output = [];
-    // accepts a value, and adds a new node with that value in the correct location in the binary search tree.
-    let newNode = new Node(value);
-    while (this.left || this.right){
-      if (this.root === null) {
-        this.root = newNode;
-      }
-      if (newNode.value < this.root) {
-        this.root = this.root.left;
-      }
-      if (newNode.value > this.root) {
-        this.root = this.root.right;
+    // accepts a value, and adds a new node with that value in the correct location in the binary search tree.  
+    const newNode = new Node(value);
+    if (!this.root) {
+      this.root = new Node(value);
+      return;
+    } else {
+      let current = this.root;
+      while (current) {
+        if (value < current.value) {
+          if (current.left === null) {
+            current.left = newNode;
+            break;
+          } else {
+            current = current.left;
+          }
+        } if (value > current.value) {
+          if (current.right === null) {
+            current.right = newNode;
+            break;
+          } else current = current.right;
+        }
       }
     }
-    output.push(newNode);
-    return output;
   }
+
 
 
 
@@ -110,22 +150,22 @@ class BinarySearchTree extends BinaryTree {
   contains(value) {
 
     while (this.root) {
-      if( this. root === value)
+      if (this.root === value)
         return true;
       if (value > this.root) {
         this.root = this.right;
-      } else if(value < this.root){
-         this.root = this.left;
+      } else if (value < this.root) {
+        this.root = this.left;
       } else {
-       return false; 
-      }              
+        return false;
+      }
     }
 
   }
 };
-  //   //contains that accepts a value, and returns a boolean indicating whther or not the value is in the tree at least once.
-  // }
+//   //contains that accepts a value, and returns a boolean indicating whther or not the value is in the tree at least once.
+// }
 
 
 
-module.exports = { BinarySearchTree, Node };
+module.exports = { BinaryTree, BinarySearchTree, Node };
