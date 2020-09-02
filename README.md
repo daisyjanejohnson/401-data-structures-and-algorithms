@@ -13,3 +13,4 @@
 10. [Data Structures: FIFO animal shelter](Data-Structures/fifoAnimalShelter/fifo-animal-shelter.js)
 11. [Challenge: MultiBracketValidation](Challenges/multiBracketValidation)
 12. [Data Structure: Binary Tree](Data-Structures/trees)
+12. [Data Structure: FizzBuzzTree](Data-Structures/trees/fizzbuzz.js)

@@ -40,3 +40,21 @@ Big O of space is O(1) because during a search we are not allocating any additio
 ## Whiteboard
 
 ![Whiteboard](../../assets/maxvaluewb.png)
+
+# Chall 18 Breadth First
+Breadth-first Traversal.
+
+## Challenge
+*Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+## Approach & Efficiency
+Big O of  time is O(h) or (height) because in the worst case, we would have to search all the way down to a leaf, which will require searching through as many nodes as the tree is tall/
+Big O of space is O(1) because during a search we are not allocating any additional space.
+
+## API
+<!-- Description of each method publicly available in each of your trees -->
+* find-maximum-value: returns the maximum value within the tree
+
+## Whiteboard
+
+![Whiteboard](../../assets/breadthwb.png)

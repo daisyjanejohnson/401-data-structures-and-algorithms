@@ -52,13 +52,13 @@ I took the Test Driven Development approach by first creating tests for what the
 
 
 
-- [ ] Top-level README “Table of Contents” is updated
+- [ X] Top-level README “Table of Contents” is updated
  - [ x] Feature tasks for this challenge are completed
  - [ ] Unit tests written and passing
      - [ ] “Happy Path” - Expected outcome
      - [ x] Expected failure
      - [ ] Edge Case (if applicable/obvious)
- - [ ] README for this challenge is complete
-     - [ ] Summary, Description, Approach & Efficiency, Solution
-     - [ ] Link to code
-     - [ ] Picture of whiteboard
+ - [x ] README for this challenge is complete
+     - [ x] Summary, Description, Approach & Efficiency, Solution
+     - [ x] Link to code
+     - [ x] Picture of whiteboard
