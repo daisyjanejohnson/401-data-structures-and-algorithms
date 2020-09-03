@@ -22,4 +22,4 @@ Big O of space is O(1) because during a search we are not allocating any additio
 
 ## Whiteboard
 
-![Whiteboard](../../assets.FizzBuzz.png)
+![Whiteboard](../../assets/FizzBuzz.png)

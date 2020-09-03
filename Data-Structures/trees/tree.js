@@ -1,4 +1,6 @@
 'use strict';
+const Queue = require('../stacks-and-queues/queue.js');
+
 const output = [];
 class Node {
   constructor(value, left = null, right = null) {
@@ -88,9 +90,26 @@ class BinaryTree {
         return max;
       }
     }
-  }
+     }
+    breadthFirst(tree){
+    // function _breadthFirst(tree){
+      let que = new Queue();
+      let arr = [];
+      que.enqueue(tree.root);
+      while(que.queue.length){
+        let front = que.dequeue();
+        arr.push(front.value);
+        if(front.left){
+          que.enqueue(front.left)
+        }
+        if(front.right){
+          que.enqueue(front.right)
+        }
+      }
+      return arr;
+    }      
+    };
 
-  }
 
 
 
