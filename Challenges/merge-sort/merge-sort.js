@@ -1,41 +1,35 @@
 'use strict';
 
 function mergeSort(arr){
-  let n = arr.length;
-  let mid = Math.floor(n/2);
-  let left = arr.slice(0,mid);
-  let right = arr.slice(mid,n);
-
-  return merge(
-    mergeSort(left), mergeSort(right)
-  );
+  if(arr.length < 2){
+    return arr;
+  } else {
+  const mid = Math.floor(arr.length/2);
+  const left = arr.slice(0,mid);
+  const right = arr.slice(mid,arr.length);
+  return merge(mergeSort(left), mergeSort(right));
+  } 
 }
 
 function merge(left,right){
   let resultArray = [];
-  let i = 0;
-  let j = 0;
 
-  while((i<left.length)&&(j<right.length)){
-    if(left[i] <= right[j]){
-      resultArray.push(left[i]);
-      i++;
+  while(left.length && right.length){
+    if(left[0] <= right[0]){
+      resultArray.push(left[0]);
+      left = left.slice(1);
     } else {
-      resultArray.push(right[j]);
-      j++
+      resultArray.push(right[0]);
+      right = right.slice(1);
     }
   }
-  // Check if there are any extra items left.
-    while(i < left.length){
-      resultArray.push(left[i]);
-      i++
-   }
-    while(j < right.length){
-      resultArray.push(right[j]);
-      j++
-    }
-
-  return resultArray
+  while(left.length){
+    resultArray.push(left.shift());
+  }
+  while(right.length){
+    resultArray.push(right.shift());
+  }
+  return resultArray;
 }
 
 module.exports = mergeSort;
