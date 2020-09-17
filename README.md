@@ -14,3 +14,6 @@
 11. [Challenge: MultiBracketValidation](Challenges/multiBracketValidation)
 12. [Data Structure: Binary Tree](Data-Structures/trees)
 12. [Data Structure: FizzBuzzTree](Data-Structures/trees/fizzbuzz.js)
+14. [Challenge: Insertion Sort](Challenges/insertionSort)
+15. [Challenge: Merge Sort](Challenges/mergeSort)
+16. [Challenge: Quick Sort](Challenges/quickSort)
