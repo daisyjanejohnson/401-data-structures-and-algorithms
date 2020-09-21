@@ -1,7 +1,6 @@
 'use strict';
 
 const { assert } = require("console");
-const { Hash, KeyObject } = require("crypto");
 
 /*
 Implement a Hashtable with the following methods:
@@ -17,9 +16,7 @@ class Hashtable{
   constructor(size=1024){
     this.buckets = new Array(size);
   }
-  hash(key){
-    return key.toString().length % this.size;
-    }
+
  add(key, value) {
 
   const index = this.hash(key);
@@ -35,11 +32,7 @@ class Hashtable{
 
     const itemsInBucket = this.buckets[index];
 
-    if(!itemsInBucket) {
-      return null;
-    }else{
-      // should have array of key value pairs
-      // [ [key, value]]
+    if(itemsInBucket) {
       for(let bucket of itemsInBucket){
         // if key matches
         if(bucket[0] === key) {
@@ -47,15 +40,32 @@ class Hashtable{
         }
       }
     }
+    return null;
   }
   contains(key){
     // signature of contains: Key (whatever form key is)
     // hashes key to return boolean
    const index = this.hash(key);
-   if(this.buckets[index]){
+   if(this.buckets[index] === undefined){
+     return false;
    }
-   return false;
-  }
+   return true;
+  } 
+   hash(key) {
+
+    let sum = 0;
+  
+    for(let char of key) {
+      sum += char.charCodeAt(0);
+    }
+  
+    const primed = sum * 599;
+  
+    const index = primed % this.buckets.length;
+  
+    return index;
+  
+    }
 }
 
 // loop to get all the charcodeAt to get teh asking number for evry letter.

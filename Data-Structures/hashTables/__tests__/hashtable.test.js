@@ -11,25 +11,15 @@ Successfully hash a key to an in-range value
 
 
 describe('Hashtable Test', () => {
-  it('should add in correct spot', () => {
+  it('should get correct value no collisions', () => {
     const table = new Hashtable();
     table.add('apple', 'pippin');
-
-    const index = table.hash('apple');
-    const value = table.buckets[index];
-    expect(value).toBe('pippin');
-  });
-  it('should add a key/value to hashtable results', () => {
-    let table = new Hashtable();
-
-  })
-  it('should get the correct value', () => {
-    const table = new Hashtable();
-
-    table.add('apple', 'pippin');
-
     const value = table.get('apple');
 
     expect(value).toBe('pippin');
+  })
+  it('should add a key/value to hashtable results', () => {
+    let table = new Hashtable();
+
   })
 })
