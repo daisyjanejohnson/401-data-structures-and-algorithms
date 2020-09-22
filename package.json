@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/daisyjanejohnson/401-data-structures-and-algorithms#readme",
   "dependencies": {
-    "node": "^14.8.0"
+    "node": "^14.11.0"
   },
   "devDependencies": {
     "jest": "^26.4.0"
