@@ -83,9 +83,9 @@ Class Node{
 
 
   
-  Funtion tree_intersection(tree1, tree 2){
+  Funtion treeIntersection(tree1, tree2){
   
   Let returnArray = [ ];
   Let hash = new Hashtable();
   
-  
+  }
