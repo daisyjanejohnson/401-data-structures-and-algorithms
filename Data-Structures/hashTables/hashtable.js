@@ -1,7 +1,4 @@
 'use strict';
-
-const { assert } = require("console");
-
 /*
 Implement a Hashtable with the following methods:
 

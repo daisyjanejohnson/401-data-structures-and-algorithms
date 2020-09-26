@@ -8,6 +8,6 @@ it('should return the correct key and values', () => {
   synonym.add('wrath', 'anger');
   antonym.add('wrath', 'delight');
 
-  expect(leftJoin(returnArr)).toBe(['wrath', 'anger', 'delight']);
+  expect(leftJoin(synonym,antonym)).toBe(['wrath', 'anger', 'delight']);
 
 })

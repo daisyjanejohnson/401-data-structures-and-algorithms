@@ -8,9 +8,10 @@
 const Hashtable = require('../../Data-Structures/hashTables/hashtable.js');
 
 function left_join(hashOne, hashTwo) {
-  outputArr = [];
+  const outputArr = [];
+  const hashArr = [];
   for (let i = 0; i < hashOne.length; i++) {
-    hashArr = [];
+    
 
     let hashOneKey = hashOne[i];
     let hashOneValue = hashOne.get(hashOneKey);
@@ -23,7 +24,7 @@ function left_join(hashOne, hashTwo) {
     }
 
   }
-  returnArr.push(hahsArr);
+  outputArr.push(hashArr);
 }
 
 module.exports = left_join;
