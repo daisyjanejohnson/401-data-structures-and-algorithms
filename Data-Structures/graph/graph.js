@@ -92,7 +92,7 @@ class Graph {
 
   return nodes;
   }
-  
+
 
 }
 
