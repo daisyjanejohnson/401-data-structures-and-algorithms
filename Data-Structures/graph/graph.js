@@ -1,3 +1,5 @@
+const { Queue } = require('../stacks-and-queues/queue');
+
 // use a tostring method on nodes to make them readable
 class Node {
   constructor(value) {
@@ -62,9 +64,41 @@ class Graph {
   size() {
     return this.adjacencyList.size;
   }
+
+  breadthFirstTraversal(startNode){
+   const nodes = new Map(); 
+   const breadthQ = new Queue();
+   const visitedArr = [];
+
+   breadthQ.enqueue(startNode);
+
+   while (breadthQ){
+
+     const front = breadthQ.dequeue();
+     nodes.set(front);
+     visitedArr.push(front);
+
+     const children = this.getNeighbors(front);
+
+     for (let child of children){
+
+      const childNode = child.startNode;
+
+      if(!visitedArr.has(childNode)){
+        breadthQ.enqueue(childNode)
+      }
+     }
+   }
+
+  return nodes;
+  }
+  
+
 }
 
-module.exports = {Graph, Node}
+
+
+module.exports = {Graph, Node }
 
 // VERTEX is a node in a graph
 
