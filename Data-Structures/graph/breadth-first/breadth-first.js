@@ -1,16 +1,36 @@
-const Graph = require('../graph.js');
+const { Graph } = require('../graph.js');
+const { Queue } = require('../../stacks-and-queues/queue');
 
 class breadthFirst extends Graph {
-  traverseBreadthFirst(vertex){
+  constructor(){
+    super()
+  }
+
+  breadthFirst(startNode){
    const nodes = new Map(); 
    const breadth = new Queue();
    const visitedArr = [];
 
-   breadth.enqueue(vertex);
-  
+   breadth.enqueue(startNode);
 
+   while (breadth){
+     const front = breadth.dequeue();
+     nodes.add(front);
+     visitedArr.push(front);
 
+     const children = this.getNeighbors(front);
 
+     for (let child of children){
+
+      const childNode = child.startNode;
+
+      if(!visitedArr.has(childNode)){
+        breadth.enqueue(childNode)
+      }
+     }
+   }
+
+  return nodes;
   }
   
 

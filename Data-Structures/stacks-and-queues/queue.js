@@ -39,4 +39,4 @@ enqueue(value){
 
 }
 
-module.exports = Queue;
+module.exports = {Queue, Node};
