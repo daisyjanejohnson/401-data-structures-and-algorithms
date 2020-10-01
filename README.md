@@ -19,3 +19,6 @@
 16. [Challenge: Quick Sort](Challenges/quickSort)
 12. [Data Structure: Hash Table](Data-Structures/hashTables/hashtable.js)
 12. [Challenge: Repeated Words](Data-Structures/hashTables/repeated-word.js)
+12. [Data Structure: Graph](Data-Structures/graph/graph.js)
+12. [Challenge: BreadthFirst Graph](Data-Structures/graph/graph.js)
+12. [Challenge: Get Edges ](Data-Structures/graph/getEdge)
